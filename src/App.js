@@ -1,17 +1,11 @@
 import React ,{ useState , useEffect } from "react";
 // 82ad317
 import "./App.css";
+import { API_KEY } from "./config";
 import SearchIcon from './search.svg';
 import MovieCard from "./MovieCard";
-const API_URL = 'http://www.omdbapi.com?apikey=82ad317';
+const API_URL = `https://www.omdbapi.com?apikey=${API_KEY}`;
 
-// const movie1 ={
-//     Poster: "https://m.media-amazon.com/images/M/MV5BMDJhZjA5MWEtOTE5Yy00MWJiLTgwNjQtMDliOWI0NWJmZDZkXkEyXkFqcGdeQXVyMjY1ODY2Ng@@._V1_SX300.jpg",
-//     Title: "Lauf um Dein Leben - Vom Junkie zum Ironman",
-//     Type: "movie",
-//     Year: "2008",
-//     imdbID: "tt0954542"
-// }
 const App = () => {
 
     const [movies , setMovies]=useState([]);
@@ -27,7 +21,7 @@ const App = () => {
 
     return (
         <div className="app">
-            <h1>MovieLand</h1>
+            <h1>FlickGaze</h1>
             <div className = "search">
                <input
                 placeholder='Search for movies'
